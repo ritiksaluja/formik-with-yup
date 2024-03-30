@@ -1,6 +1,7 @@
   import { useState } from 'react'
   import {ValidationSchema} from './validations/validation.jsx'
   import { Formik, Form, Field, ErrorMessage } from 'formik';
+  import { postData } from './services/api.jsx';
 
   import './App.css'
 
@@ -11,6 +12,7 @@
     const handleSubmit = (values) => {
      
       console.log(values);
+      postData(values)
     };
 
     return (
